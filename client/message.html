@@ -1,0 +1,25 @@
+<template name="message">
+	{{#if left}}
+		<div class="leftItem">
+			<span class="name">{{userName}}</span>
+			<div class="messageBlock">
+				<div class="triangle"></div>
+				<span class="message">{{message}}</span>
+			</div>
+		</div>
+	{{else}}
+		{{#if system}}
+			<div class="centerItem">
+				<span class="systemMessage">{{message}}</span>
+			</div>
+		{{else}}
+			<div class="rightItem">
+				<span class="name">{{userName}}</span>
+				<div class="messageBlock">
+				<div class="triangle"></div>
+					<span class="message">{{message}}</span>
+				</div>
+			</div>
+		{{/if}}
+	{{/if}}
+</template>

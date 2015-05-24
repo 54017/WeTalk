@@ -1,0 +1,32 @@
+<template name="chat">
+  <div>
+  	<div class="header">
+  		<div class="logout">
+  			<div class="logo">
+  				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true">
+  				</span> 
+  				<span>退出</span>
+  			</div>
+  			<div class="onliners">
+  				<span class="userName">当前在线人数:{{userNumber}}</span>
+  			</div>
+  			<div class="userLogo">
+  				<span class="glyphicon glyphicon-user"></span>
+  			</div>
+  		</div>
+  	</div>
+  	<div class="chatBody">
+  	{{#each messages}}
+  		{{>message}}
+  	{{/each}}
+  	</div>
+  	<div class="inputText">
+  		<div class="inputBar">
+    			<input type="text" class="form-control chatInput">
+    		</div>
+    		<div class="sendBt">
+    			<button class="btn btn-default send">发送</button>
+    		</div>
+  	</div>
+  </div>
+</template>
